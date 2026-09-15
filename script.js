@@ -3,6 +3,8 @@ const container = document.querySelector(".container");
 for (let i = 1; i <= 256; i++) {
   let newDiv = document.createElement("div");
   newDiv.classList.add("gridDiv");
+  newDiv.style.width = `${640 / Math.sqrt(256)}px`;
+  newDiv.style.height = `${640 / Math.sqrt(256)}px`;
   container.append(newDiv);
 }
 
