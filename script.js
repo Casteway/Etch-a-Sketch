@@ -8,6 +8,10 @@ for (let i = 1; i <= 256; i++) {
 
 container.addEventListener("mouseover", (event) => {
   if (event.target.classList.contains("gridDiv")) {
-    event.target.style.backgroundColor = "purple";
+    event.target.style.backgroundColor = `rgb(${getRandomRGBComponent()}, ${getRandomRGBComponent()}, ${getRandomRGBComponent()})`;
   }
 });
+
+function getRandomRGBComponent() {
+  return Math.floor(Math.random() * 256);
+}
