@@ -17,3 +17,14 @@ function getRandomRGBComponent() {
 }
 
 const userInputBtn = document.querySelector(".userInputBtn");
+
+userInputBtn.addEventListener("click", changeGridSize);
+
+function changeGridSize(event) {
+  event.preventDefault();
+  newSize = prompt("Provide Number of squares per side for the new grid");
+  if (newSize > 100) {
+    newGridSize = prompt("Sorry, max  size is 100");
+  }
+  return newSize;
+}
