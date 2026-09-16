@@ -27,13 +27,11 @@ userInputBtn.addEventListener("click", changeGridSize);
 
 function changeGridSize(event) {
   event.preventDefault();
-  newSize = prompt("Provide Number of squares per side for the new grid");
-  if (newSize > 100) {
-    newGridSize = prompt("Sorry, max  size is 100");
-  } else if (newSize <= 1) {
-    newGridSize = prompt("Sorry, min size is 2");
+  let newSize = prompt("Provide Number of squares per side for the new grid");
+  while (newSize > 100 || newSize <= 1) {
+    newSize = prompt("Provide size between 2 and 100");
   }
-  return newSize;
+  createGrid(newSize);
 }
 
 createGrid(16);
